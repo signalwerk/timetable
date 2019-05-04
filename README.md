@@ -1,2 +1,1 @@
-# timetable
-Base Timetable System
+# gatsby theme for timetable
