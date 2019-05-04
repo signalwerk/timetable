@@ -27,16 +27,4 @@ class Index extends React.Component {
   }
 }
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-        authorUrl
-      }
-    }
-  }
-`
 export default Index
