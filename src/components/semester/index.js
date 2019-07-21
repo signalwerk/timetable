@@ -1,23 +1,23 @@
-import React from "react";
-import Weeks from "../weeks";
-import Lessions from "../lessions";
-import moment from "moment";
-import Link from "gatsby-link";
+import React from 'react'
+import Weeks from '../weeks'
+import Lessions from '../lessions'
+import moment from 'moment'
+import Link from 'gatsby-link'
 
-import './style.css';
+import './style.css'
 
 class Semester extends React.Component {
-  state = { defaultLink: false };
+  state = { defaultLink: false }
 
   componentDidMount() {
-    let currentAnchor = moment().format("[KW]ww-YYYY");
+    let currentAnchor = moment().format('[KW]ww-YYYY')
     if (document.getElementById(currentAnchor)) {
-      this.setState({ defaultLink: currentAnchor });
+      this.setState({ defaultLink: currentAnchor })
     }
   }
 
   render() {
-    let { semester, data, teachers, lessions } = this.props;
+    let { semester, data, teachers, lessions } = this.props
 
     return (
       <div className="semester">
@@ -33,7 +33,7 @@ class Semester extends React.Component {
                 <Link
                   to={link.href}
                   activeClassName="active"
-                  className={`navigation ${link.class ? link.class : ""}`}
+                  className={`navigation ${link.class ? link.class : ''}`}
                 >
                   {link.title}
                 </Link>
@@ -42,10 +42,12 @@ class Semester extends React.Component {
           </ul>
         </div>
 
-        {this.state &&
-          this.state.defaultLink && (
+        <p>
+          {this.state && this.state.defaultLink && (
             <a href={`#${this.state.defaultLink}`}>↓ aktuell</a>
           )}
+          &nbsp;
+        </p>
 
         <Lessions data={data} teachers={teachers} lessions={lessions} />
 
@@ -81,7 +83,7 @@ class Semester extends React.Component {
               target="_blank"
             >
               → Stundenplan auf Github
-            </a>{" "}
+            </a>
             <a
               href="webcal://logrinto.github.io/IAD2017.timetable/IAD.ics"
               rel="noopener noreferrer"
@@ -92,8 +94,8 @@ class Semester extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Semester;
+export default Semester
