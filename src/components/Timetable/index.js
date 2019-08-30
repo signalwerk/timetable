@@ -12,7 +12,7 @@ export const Timetable = ({ semester, data, teachers, lessions, generation }) =>
       data={data}
       teachers={teachers}
       lessions={lessions}
-      generation={generation || 2017}
+      generation={generation}
     />
   )
 }
