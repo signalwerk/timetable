@@ -17,7 +17,7 @@ class Semester extends React.Component {
   }
 
   render() {
-    let { semester, data, teachers, lessions } = this.props
+    let { semester, data, teachers, lessions, generation } = this.props
 
     return (
       <div className="semester">
@@ -78,14 +78,14 @@ class Semester extends React.Component {
 
           <div>
             <a
-              href="https://github.com/logrinto/IAD2017.timetable"
+              href={`https://github.com/logrinto/IAD${generation}.timetable`}
               rel="noopener noreferrer"
               target="_blank"
             >
               → Stundenplan auf Github
-            </a>
+            </a>{' '}
             <a
-              href="webcal://logrinto.github.io/IAD2017.timetable/IAD.ics"
+              href={`webcal://logrinto.github.io/IAD${generation}.timetable/IAD.ics`}
               rel="noopener noreferrer"
               target="_blank"
             >
