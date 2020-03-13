@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = ({ root }) => ({
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
-    "gatsby-transformer-yaml",
+    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
