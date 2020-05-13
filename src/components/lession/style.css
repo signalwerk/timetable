@@ -1,10 +1,12 @@
-@import "../_global/color.css";
+@import '../_global/color.css';
 
 .lession {
   @media print {
     page-break-inside: avoid;
   }
-
+  .lession-bg--transparent {
+    background-color: transparent;
+  }
   .lession-bg--black {
     background-color: $c_black;
   }
