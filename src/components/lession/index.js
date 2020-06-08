@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Tableview from '../tableview'
 import Anchor from '../anchor'
 import { TotalLessions } from './totalLessions'
