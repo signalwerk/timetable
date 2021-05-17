@@ -165,7 +165,7 @@ class IcsSemesterplan {
     var notes = ''
 
     if (data.teacher) {
-      notes += 'Lehrer: ' + (data.teacher || 'noch offen')
+      notes += `Lehrer: ${data.teacher || 'noch offen'}`
       notes += '\n\n'
     }
     if (data.comment) {
@@ -254,7 +254,7 @@ class IcsSemesterplan {
 
     let out = calendar.toString()
     fs.writeFileSync(path, out)
-    console.log('ics written to ' + path)
+    console.log(`ics written to ${path}`)
   }
 }
 
